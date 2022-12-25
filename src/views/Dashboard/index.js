@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import Company from "../../component/Company"
 import { logout, getUserInfo} from '../../config/firebase'
+import LogoutBtn from "../../component/Logout-btn"
 
 import "../../Css/dashboard.css"
 import { getAllCompany } from '../../config/firebase'
@@ -15,11 +16,13 @@ export default function Dashboard() {
   useEffect(()=>{
     // getAllCompany()
     getUserDetailFirebase()
+    console.log(userInfomation)
   },[])
 
 async function getUserDetailFirebase(){
   const userInfo = await getUserInfo()
   setUserinfomation(userInfo)
+
 }
 
 
@@ -35,10 +38,11 @@ navigate("/user")
 
 
 <>
-    <div className='logout'>
+    {/* <div className='logout'>
       <h1>Dashboard</h1>
       <button className='logout' onClick={logout}>Logout</button>
-    </div>
+    </div> */}
+    <LogoutBtn name="Dashboard" />
     <div className='main'>
       <h2>
       Welcome To {userInfomation?.displayName}

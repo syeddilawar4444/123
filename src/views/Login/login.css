@@ -67,7 +67,11 @@ font-weight: 500;
 line-height: 42px;
 text-align: center;
 }
-
+p{
+  font-size: 30px;
+  align-self: center;
+  color: red;
+}
 label{
 display: block;
 margin-top: 30px;

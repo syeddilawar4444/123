@@ -78,6 +78,9 @@ textarea:focus{
     outline-color: gray;
 
 }
+/* select:focus{
+    outline: gray;
+} */
 .form-box h1{
     color: black;
 }
